@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | TaskFlow</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <div class="container navbar">
+            <h1 class="logo">TaskFlow</h1>
+            <nav class="nav-links">
+                <span class="user-name">Mahesh Shet</span>
+                <a href="login.html" class="logout-link logout-icon" aria-label="Logout" title="Logout">&#10162;</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="dashboard-copy">
+                    <span class="dashboard-kicker">Workspace</span>
+                    <h2>My Tasks</h2>
+                    <p>Track what needs attention, review progress quickly, and jump into the right task fast.</p>
+                </div>
+                <div class="dashboard-actions">
+                    <a href="task-form.html" class="btn btn-primary">+ New Task</a>
+                </div>
+            </div>
+
+            <div class="task-summary-grid">
+                <div class="summary-card summary-total">
+                    <h3>12</h3>
+                    <p>Total Tasks</p>
+                    <span class="summary-note">All work items in your queue</span>
+                </div>
+                <div class="summary-card summary-pending">
+                    <h3>4</h3>
+                    <p>Pending</p>
+                    <span class="summary-note">Waiting to be started</span>
+                </div>
+                <div class="summary-card summary-completed">
+                    <h3>5</h3>
+                    <p>Completed</p>
+                    <span class="summary-note">Closed this cycle</span>
+                </div>
+                <div class="summary-card overdue-summary">
+                    <h3>2</h3>
+                    <p>Overdue</p>
+                    <span class="summary-note">Needs attention first</span>
+                </div>
+            </div>
+
+            <div class="task-table-card">
+                <div class="table-header-row">
+                    <div class="table-heading-block">
+                        <h3>Your Task List</h3>
+                        <p class="table-subtitle">Overdue items are highlighted so you can act on them first.</p>
+                        <div class="task-filter-row">
+                            <a href="#" class="task-filter active">All</a>
+                            <a href="#" class="task-filter">Active</a>
+                            <a href="#" class="task-filter">Overdue</a>
+                        </div>
+                    </div>
+                    <label class="search-box-wrap">
+                        <span class="search-icon">&#128269;</span>
+                        <input type="text" placeholder="Search tasks..." class="search-box" />
+                    </label>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="task-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th class="title-column">Title</th>
+                                <th>Status</th>
+                                <th>Due Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="task-row overdue-row">
+                                <td>#101</td>
+                                <td class="title-cell">
+                                    <div class="task-title-wrap">
+                                        <span class="task-title-main">Finish API integration</span>
+                                        <span class="task-title-meta">Backend, API, urgent handoff</span>
+                                    </div>
+                                </td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>
+                                    <div class="due-date-stack">
+                                        <span class="due-date overdue-date">2026-03-20</span>
+                                        <span class="due-hint">7 days overdue</span>
+                                    </div>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="task-view.html" class="btn-sm icon-btn view-btn" aria-label="View task" title="View task">&#128065;</a>
+                                    <a href="task-form.html" class="btn-sm icon-btn edit-btn" aria-label="Edit task" title="Edit task">&#9998;</a>
+                                    <a href="#" class="btn-sm icon-btn delete-btn" aria-label="Delete task" title="Delete task">&#128465;</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#102</td>
+                                <td class="title-cell">
+                                    <div class="task-title-wrap">
+                                        <span class="task-title-main">Write JWT docs</span>
+                                        <span class="task-title-meta">Docs, auth flow, release notes</span>
+                                    </div>
+                                </td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>
+                                    <div class="due-date-stack">
+                                        <span class="due-date">2026-03-18</span>
+                                        <span class="due-hint">Closed on time</span>
+                                    </div>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="task-view.html" class="btn-sm icon-btn view-btn" aria-label="View task" title="View task">&#128065;</a>
+                                    <a href="task-form.html" class="btn-sm icon-btn edit-btn" aria-label="Edit task" title="Edit task">&#9998;</a>
+                                    <a href="#" class="btn-sm icon-btn delete-btn" aria-label="Delete task" title="Delete task">&#128465;</a>
+                                </td>
+                            </tr>
+                            <tr class="task-row overdue-row">
+                                <td>#103</td>
+                                <td class="title-cell">
+                                    <div class="task-title-wrap">
+                                        <span class="task-title-main">Create UI pages</span>
+                                        <span class="task-title-meta">Frontend, layout pass, polish pending</span>
+                                    </div>
+                                </td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>
+                                    <div class="due-date-stack">
+                                        <span class="due-date overdue-date">2026-03-25</span>
+                                        <span class="due-hint">2 days overdue</span>
+                                    </div>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="task-view.html" class="btn-sm icon-btn view-btn" aria-label="View task" title="View task">&#128065;</a>
+                                    <a href="task-form.html" class="btn-sm icon-btn edit-btn" aria-label="Edit task" title="Edit task">&#9998;</a>
+                                    <a href="#" class="btn-sm icon-btn delete-btn" aria-label="Delete task" title="Delete task">&#128465;</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination-bar">
+                    <p class="pagination-info">Showing 1-3 of 12 tasks</p>
+                    <nav class="pagination" aria-label="Task list pagination">
+                        <a href="#" class="page-link">Prev</a>
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link">4</a>
+                        <a href="#" class="page-link">Next</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

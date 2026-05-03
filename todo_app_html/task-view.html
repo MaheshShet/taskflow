@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Details | TaskFlow</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <div class="container navbar">
+            <h1 class="logo">TaskFlow</h1>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <span class="user-name">John Doe</span>
+                <a href="login.html" class="logout-link logout-icon" aria-label="Logout" title="Logout">&#10162;</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-section">
+        <div class="container">
+            <div class="task-detail-hero">
+                <div class="task-detail-heading">
+                    <span class="detail-kicker">Task Details</span>
+                    <h2>Finish API integration</h2>
+                </div>
+
+                <div class="detail-actions">
+                    <a href="dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+                    <a href="task-form.html" class="btn btn-primary">Edit</a>
+                </div>
+            </div>
+
+            <div class="task-detail-layout">
+                <section class="task-detail-card detail-description-card">
+                    <h3>Description</h3>
+                    <p class="detail-copy">
+                        The dashboard table should load tasks from the backend, render the latest status cleanly,
+                        and give users fast access to view, edit, and delete actions. This task is overdue because
+                        the API wiring and status refresh behavior still need final verification.
+                    </p>
+                </section>
+
+                <section class="task-detail-card detail-info-card">
+                    <h3>Overview</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Due Date</span>
+                            <strong class="detail-value">2026-03-20</strong>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status</span>
+                            <strong class="detail-value detail-badge pending-badge">Pending</strong>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Priority</span>
+                            <strong class="detail-value detail-badge priority-badge">High</strong>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Last Updated</span>
+                            <strong class="detail-value">2026-03-26</strong>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create / Edit Task | TaskFlow</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <div class="container navbar">
+            <h1 class="logo">TaskFlow</h1>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <span class="user-name">John Doe</span>
+                <a href="login.html" class="logout-link logout-icon" aria-label="Logout" title="Logout">&#10162;</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-page-section">
+        <div class="container">
+            <div class="form-layout">
+                <div class="form-card large-form-card">
+                    <div class="form-card-header form-hero">
+                        <div class="form-copy">
+                            <span class="form-kicker">Task Editor</span>
+                            <h2>Create / Edit Task</h2>
+                            <p>Create a focused task entry with just enough detail to make the next action obvious.</p>
+                        </div>
+                        <div class="form-progress">
+                            <span class="form-progress-label">Ready to save</span>
+                            <strong>Clear title, useful description, realistic schedule</strong>
+                        </div>
+                    </div>
+
+                    <form class="task-form">
+                        <div class="form-section-head">
+                            <h3>Core Details</h3>
+                            <p>Start with the essentials so the task is easy to scan later.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskTitle">Task Title</label>
+                            <input type="text" id="taskTitle" name="taskTitle" placeholder="Enter task title" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskDescription">Description</label>
+                            <textarea id="taskDescription" name="taskDescription" rows="6" placeholder="Describe the work, blockers, or expected result"></textarea>
+                        </div>
+
+                        <div class="form-section-head">
+                            <h3>Workflow Details</h3>
+                            <p>Set the current state, deadline, and urgency for this task.</p>
+                        </div>
+
+                        <div class="form-grid-3">
+                            <div class="form-group">
+                                <label for="taskStatus">Status</label>
+                                <select id="taskStatus" name="taskStatus">
+                                    <option value="PENDING">Pending</option>
+                                    <option value="IN_PROGRESS">In Progress</option>
+                                    <option value="COMPLETED">Completed</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taskDueDate">Due Date</label>
+                                <input type="date" id="taskDueDate" name="taskDueDate" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taskPriority">Priority</label>
+                                <select id="taskPriority" name="taskPriority">
+                                    <option value="LOW">Low</option>
+                                    <option value="MEDIUM">Medium</option>
+                                    <option value="HIGH">High</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="dashboard.html" class="btn btn-outline">Cancel</a>
+                            <button type="submit" class="btn btn-primary">Save Task</button>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="form-side-card">
+                    <span class="form-kicker">Quick Guide</span>
+                    <h3>Write tasks that stay actionable</h3>
+                    <div class="form-tip-list">
+                        <div class="form-tip-item">
+                            <strong>Lead with the outcome</strong>
+                            <p>Use a title that explains what should be finished, not just the topic.</p>
+                        </div>
+                        <div class="form-tip-item">
+                            <strong>Keep the description practical</strong>
+                            <p>Add context, blockers, or acceptance notes so future-you knows what to do next.</p>
+                        </div>
+                        <div class="form-tip-item">
+                            <strong>Set urgency honestly</strong>
+                            <p>Due date and priority work best when they reflect real deadlines, not wishful ones.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
