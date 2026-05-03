@@ -1,6 +1,6 @@
 # 🚀 Full Stack To-Do App using Spring Boot, Angular, JWT & MySQL
 
-a complete full-stack To-Do application step by step using modern technologies with a clean layered architecture, form validation, pagination, and secure JWT login.
+A complete full-stack To-Do application step by step using modern technologies with a clean layered architecture, form validation, pagination, and secure JWT login.
 
 This repository is **public for learning**, but only the owner maintains the code and merges changes.
 
