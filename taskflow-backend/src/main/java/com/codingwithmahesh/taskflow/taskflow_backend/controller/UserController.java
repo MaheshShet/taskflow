@@ -2,9 +2,12 @@ package com.codingwithmahesh.taskflow.taskflow_backend.controller;
 
 import com.codingwithmahesh.taskflow.taskflow_backend.dto.task.TaskRequest;
 import com.codingwithmahesh.taskflow.taskflow_backend.dto.task.TaskResponse;
+import com.codingwithmahesh.taskflow.taskflow_backend.dto.user.AuthResponse;
+import com.codingwithmahesh.taskflow.taskflow_backend.dto.user.LoginRequest;
 import com.codingwithmahesh.taskflow.taskflow_backend.dto.user.RegisterUser;
 import com.codingwithmahesh.taskflow.taskflow_backend.dto.user.UserResponse;
 import com.codingwithmahesh.taskflow.taskflow_backend.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,10 +26,15 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<UserResponse> register(@RequestBody RegisterUser registerUser) {
+    public ResponseEntity<UserResponse> register(@Valid @RequestBody RegisterUser registerUser) {
         UserResponse userResponse = userService.createUser(registerUser);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(userResponse);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
+        return ResponseEntity.ok(userService.login(request));
     }
 }
